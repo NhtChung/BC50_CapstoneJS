@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Oleo+Script&family=Passion+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&family=Russo+One&family=Special+Elite&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/asset/css/main_styles.css" />
+  <link rel="stylesheet" href="/asset/css/style.css" />
+  <link rel="stylesheet" href="/asset/css/bootstrap.min.css" / <link rel="stylesheet"
+    href="/asset/css/stylelayout.css" />
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <style>
+    .header {
+  background-color: #FFFFFF;
+  backdrop-filter: blur(40px);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+}
+
+.header__container ul a {
+  color: black;
+}
+
+.headerMB {
+  background-color: #005ab7;
+}
+
+.headerMB:focus,
+:hover {
+  cursor: pointer;
+}
+
+.headerMB .navMB a {
+  color: #ffffff;
+}
+
+button:hover {
+  background-position: 100% 0;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+  cursor: pointer;
+}
+
+.logo {
+  width: auto !important;
+}
+
+.logo a {
+  font-size: 24px;
+  color: #1e1e27;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.logo a span {
+  color: #fe4c50;
+}
+
+.navbar_user {
+  margin-left: 37px;
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 0px;
+}
+
+.navbar_user li {
+  display: inline-block;
+  text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  /*padding: 5px;*/
+  border: 1px solid #888;
+  width: 60%;
+  /* Could be more or less, depending on screen size */
+}
+
+.rowTitle {
+  background-color: #0066b3;
+  color: #ffffff;
+  padding: 10px;
+  font-size: larger;
+}
+
+span i {
+  margin-right: 10px;
+}
+
+.form-group {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.tr_tittle_tb {
+  background-color: blue;
+  color: white;
+
+}
+
+.tr_tittle_tb th {
+  border: 1px solid;
+}
+  </style>
+</head>
+
+<body>
+  <header class="header" data-aos="fade-down" data-aos-offset="300" data-aos-duration="1000"
+    data-aos-easing="ease-in-out">
+    <div class="headerMB">
+      <div class="head">
+        <div class="logo">
+          <a href="/">La Fleur<span>&nbsp;De Marie</span></a>
+
+        </div>
+        <div class="closeMN">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+      <div class="button">
+        <a href="" style="color:#ffffff;">Đăng Nhập</a>
+      </div>
+      <div class="navMB">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/admin/view/index.html">Admin Page</a></li>
+
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="header__container container">
+      <div class="logo">
+        <a href="/">La Fleur<span>&nbsp;De Marie</span></a>
+      </div>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/admin/view/index.html">Admin Page</a></li>
+      </ul>
+      <div class="menuMB">
+        <i class="fa-solid fa-bars"></i>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- // start content page  -->
+  <main style="margin-top: 100px;">
+
+    <div class="container" id="content-wrap">
+      <div class="mt-5" style="background: white;
+                                    box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+                                    border-top-left-radius: 10px;
+                                    border-top-right-radius: 10px;">
+        <div class='d-flex justify-content-between mb-2 py-3 px-2' style="background: #005ab7;
+              border-top-right-radius: 10px;
+              border-top-left-radius: 10px;">
+          <h3 class="text-light">Quản Lý Sản Phẩm</h3>
+          <div class="text-right">
+            <button type="button" class="btn btn-banner" style="background-color: green;" id="btnOpenModal">
+              <i class="fa-solid fa-circle-plus me-2" style="margin-right: 10px;"></i> Thêm sản phẩm
+            </button>
+          </div>
+        </div>
+        <div class=" table-responsive" style="padding: 20px;">
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Tìm sản phẩm: </span>
+              </div>
+              <input type="text" name="name" id="txtFind" class="form-control input-sm" placeholder="Tên sản phẩm" style="max-width: 200px;;"/>
+              <button class="btn btn-info" id="btnFind" style="margin-left: 10px;"><i class="fa-solid fa-magnifying-glass"></i> Tìm kiếm</button>
+            </div>
+            <span id="valicationname"></span>
+          </div>
+         
+        </div>
+        <div class="form-group" style="display: flex;">
+          Sắp xếp theo giá:
+          <div style="margin: 5px;">
+            <input type="radio" id="cbTang" name="sort_price" value="Tăng">
+            <label for="cbTang"> Tăng</label><br>
+          </div>
+          <div style="margin: 5px;">
+            <input type="radio" id="cbGiam" name="sort_price" value="Giảm">
+            <label for="cbGiam"> Giảm</label><br>
+          </div>
+            
+        </div>
+        <div class=" table-responsive">
+          <table class="table display" id="myTable">
+            <thead class="">
+              <tr class="tr_tittle_tb">
+                <th>Mã</th>
+                <th>Tên sản phẩm</th>
+                <th>Giá</th>
+                <th>Màn hình</th>
+                <th>Camera trước</th>
+                <th>Camera sau</th>
+                <th>Ảnh</th>
+                <th>Mô tả</th>
+                <th>Nhãn hiệu</th>
+                <th><em class="fa fa-cog"></em> </th>
+              </tr>
+            </thead>
+            <tbody id="tableProduct">
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <!-- // end content page  -->
+  <div id="modal-ThemSP" class="modal" style="z-index: 10;">
+    <!-- Modal content -->
+    <div class="modal-content" style=" width: 37%; margin-top: 100px;">
+      <div class="container col-12">
+        <div style="width: 100%;">
+          <div class="row rowTitle">
+            <div class="col-11" style="text-align:left;">Thông tin sản phẩm</div>
+            <div class="col-1"><span class="close" id="close-ThemSP">&times;</span></div>
+          </div>
+          <!--end Title-->
+          <div class="row" style="margin-top: 15px;">
+            <!-- Modal body -->
+            <div class="modal-body">
+              <form role="form" id="formProduct">
+                <div class="form-group">
+                  <div class="input-group">Tên sản phẩm</div>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa-solid fa-mobile-screen-button"></i></span>
+                    </div>
+                    <input type="text" name="name" id="name" class="form-control input-sm" placeholder="Tên sản phẩm" />
+                  </div>
+                  <span id="valicationname"></span>
+                </div>
+                <div class="form-group">
+                  <div class="input-group">Giá sản phẩm</div>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa-regular fa-dollar-sign"></i></span>
+                    </div>
+                    <input type="text" name="name" id="price" class="form-control input-sm"
+                      placeholder="Giá sản phẩm" />
+                  </div>
+                  <span id="valicationprice"></span>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group">Kích thước màn hình</div>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa-solid fa-mobile-screen"></i></span>
+                    </div>
+                    <input type="text" name="email" id="screen" class="form-control input-sm"
+                      placeholder="Kích thước màn hình" />
+                  </div>
+
+                  <span id="valicationscreen"></span>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group">Độ phân giải Camera sau</div>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa-solid fa-camera"></i></span>
+                    </div>
+                    <input type="text" name="name" id="backCam" class="form-control"
+                      placeholder="Độ phân giải Camera sau" />
+                  </div>
+
+                  <span id="valicationbackCam"></span>
+                </div>
+                <div class="form-group">
+
+                  <div class="input-group">Độ phân giải Camera trước</div>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa-solid fa-camera"></i></i></span>
+                    </div>
+                    <input type="text" name="name" id="frontCam" class="form-control"
+                      placeholder="Độ phân giải Camera trước" />
+                  </div>
+
+                  <span id="valicationfrontCam"></span>
+                </div>
+                <div class="form-group">
+
+                  <div class="input-group">Link ảnh</div>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa-solid fa-link"></i></i></span>
+                    </div>
+                    <input type="text" name="name" id="img" class="form-control" placeholder="Link ảnh" />
+                  </div>
+
+                  <span id="valicationimg"></span>
+                </div>
+                <div class="form-group">
+                  <div class="input-group">Mô tả sản phẩm</div>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa-solid fa-comment"></i></span>
+                    </div>
+                    <input type="text" name="name" id="desc" class="form-control" placeholder="Mô tả sản phẩm" />
+                  </div>
+
+                  <span id="valicationdesc"></span>
+                </div>
+
+
+                <div class="form-group">
+                  <div class="input-group">Nhãn hiệu</div>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa-solid fa-signature"></i></span>
+                    </div>
+                    <select class="form-control" name="chucvu" id="type">
+                      <option selected disabled>Chọn nhãn hiệu</option>
+                      <option>Iphone</option>
+                      <option>Samsung</option>
+                    </select>
+                  </div>
+
+                  <span id="valicationtype"></span>
+                </div>
+
+              </form>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer" id="modal-footer" style="width: 100%;">
+              <button type="button" class="btn btn-primary" id="btnAddProduct">
+                Thêm sản phẩm
+              </button>
+              <button id="btnUpdate" type="button" class="btn btn-primary">
+                Cập nhập sản phẩm
+              </button>
+              <button id="btnClose" type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                Đóng
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- //start footer -->
+  <footer class="footer"
+    style="margin-top: 25px; margin-bottom: 0px; background: #005ab7; color:#ffffff; z-index: -10;">
+    <hr />
+    <div class="footer__container container">
+
+      <div class="foot__bt">
+        <div class="foot" style="margin: 2rem 0 1rem 0;">
+          <div class="foot__gr">
+            <div class="foot__it">
+              <div class="logo">
+                <a href="/">La Fleur<span>&nbsp;De Marie</span></a>
+
+              </div>
+            </div>
+            <div class="foot__it">
+              <h5 style="color:#ffffff">Quick Links</h5>
+              <ul>
+                <li><a href="#">Trang Chủ</a></li>
+                <li>
+                  <a href="/admin/view/index.html">
+                    Admin page
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="foot__it">
+              <h5 style="color:#ffffff">BRANDS</h5>
+              <ul>
+                <li><a href="/">Iphone</a></li>
+                <li>
+                  <a href="/">
+                    SamSung
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="foot__it">
+              <h5 style="color:#ffffff">CONTACT</h5>
+              <ul>
+                <li>
+                  Địa chỉ: Hồ Chí MInh
+                </li>
+                <li>
+                  Email: LAFLEURDEMARIE@gmail.com
+                </li>
+                <li>
+                  Hotline: 09999999
+                </li>
+              </ul>
+            </div>
+
+            <div class="foot__it" style="max-width: 177px;">
+
+              <div class="icon__gr">
+                <a href="#">
+                  <i style="color:#ffffff" class="fa-brands fa-telegram"></i>
+                </a>
+                <a href="#">
+                  <i style="color:#ffffff" class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="#">
+                  <i style="color:#ffffff" class="fa-brands fa-discord"></i>
+                </a>
+                <a href="">
+                  <i style="color:#ffffff" class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bannel" style="padding-bottom: 40px; grid-template-columns: 0.8fr 3fr; color:#ffffff">
+          <h5 style="color: #ffffff; padding-left: 18px;">©2023 - LA FLEUR DE MARIE.</h5>
+          <p style="font-weight: 500;">
+            LA FLEUR DE MARIE - Hệ thống bán lẻ điện thoại di động toàn quốc với 20 cửa hàng uy tín, kinh
+            nghiệm gần 10 năm trong lĩnh vực bán lẻ các sản phẩm điện thoại di ...
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- //end footer -->
+
+  <script>
+    const btnMenuMB = document.querySelector('.menuMB');
+    const closeMN = document.querySelector('.closeMN');
+    const headerMB = document.querySelector('.headerMB');
+    const header = document.querySelector('header');
+    btnMenuMB.onclick = () => {
+      headerMB.style.transform = 'translateX(0)';
+    };
+    closeMN.onclick = () => {
+      headerMB.style.transform = 'translateX(-100%)';
+    };
+  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script type="module" src="../controller/index.js"></script>
+  <script>
+    // Get the <span> element that closes the modal
+    var span_X = document.getElementById("close-ThemSP");
+
+    // When the user clicks on <span> (x), close the modal
+    span_X.onclick = function () {
+      var modal_ThemCT = document.getElementById("modal-ThemSP");
+      modal_ThemCT.style.display = "none";
+    }
+
+  </script>
+</body>
+
+</html>
